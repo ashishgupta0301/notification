@@ -14,6 +14,6 @@
 
 FROM websphere-liberty:javaee7
 COPY server.xml /config/server.xml
-#COPY wmq.jmsra.rar /config/wmq.jmsra.rar
+COPY wmq.jmsra.rar /config/wmq.jmsra.rar
 COPY notification-ear/target/notification-ear-1.0-SNAPSHOT.ear /config/apps/Notification.ear
 RUN installUtility install --acceptLicense defaultServer
